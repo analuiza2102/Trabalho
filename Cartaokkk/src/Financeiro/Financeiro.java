@@ -2,6 +2,8 @@ package Financeiro;
 
 import Interface.InterfaceCadastro;
 
+import javax.sound.midi.Soundbank;
+
 public class Financeiro implements InterfaceCadastro {
 
     private int id;
@@ -13,6 +15,20 @@ public class Financeiro implements InterfaceCadastro {
     private double juros;
     private double multa;
     private double desconto;
+
+    public Financeiro(int id, int numero, String emissao, String vencimento, String pagamento, double valor, double juros, double multa, double desconto, double total) {
+        this.id = id;
+        this.numero = numero;
+        this.emissao = emissao;
+        this.vencimento = vencimento;
+        this.pagamento = pagamento;
+        this.valor = valor;
+        this.juros = juros;
+        this.multa = multa;
+        this.desconto = desconto;
+        this.total = total;
+    }
+
 
     public int getId() {
         return id;
@@ -101,11 +117,58 @@ public class Financeiro implements InterfaceCadastro {
 
     @Override
     public void entrar() {
+        System.out.println("ID: ");
+        int novoId = leia.nextInt();
+        setId(novoId);
 
+        System.out.println("Número: ");
+        int novoNumero = leia.nextInt();
+        setNumero(novoNumero);
+
+        System.out.println("Emissão: ");
+        String novaEmissao = leia.next();
+        setEmissao(novaEmissao);
+
+        System.out.println("Vencimento: ");
+        String novoVencimento = leia.next();
+        setVencimento(novoVencimento);
+
+        System.out.println("Pagamento: ");
+        String novoPag = leia.next();
+        setPagamento(novoPag);
+
+        System.out.println("Valor: ");
+        double novoValor = leia.nextDouble();
+        setValor(novoValor);
+
+        System.out.println("Juros: ");
+        double novoJuros = leia.nextDouble();
+        setJuros(novoJuros);
+
+        System.out.println("Multa: ");
+        double novaMulta = leia.nextDouble();
+        setMulta(novaMulta);
+
+        System.out.println("Desconto: ");
+        double novoDesconto = leia.nextDouble();
+        setDesconto(novoDesconto);
+
+        System.out.println("Total: ");
+        double novoTotal = leia.nextDouble();
+        setTotal(novoTotal);
     }
 
     @Override
     public void imprimir() {
-
+        System.out.println("ID: " + getId());
+        System.out.println("Número: " + getNumero());
+        System.out.println("Emissão: " + getEmissao());
+        System.out.println("Vencimento: " + getVencimento());
+        System.out.println("Pagamento: " + getPagamento());
+        System.out.println("Valor: " + getValor());
+        System.out.println("Juros: " + getJuros());
+        System.out.println("Multa: " + getMulta());
+        System.out.println("Desconto: " + getDesconto());
+        System.out.println("Total: " + getTotal());
     }
 }

@@ -6,11 +6,19 @@ import Interface.InterfaceCadastro;
 
 public class Pessoa implements InterfaceCadastro {
 
-    public int id;
-    public String nome;
-    public String email;
+    private int id;
+    private String nome;
+    private String email;
     Telefone telefone;
     Endereco endereco;
+
+    public Pessoa(int id, String nome, String email, Telefone telefone, Endereco endereco){
+        this.id = id;
+        this.nome = nome;
+        this.email = email;
+        this.telefone = telefone;
+        this.endereco = endereco;
+    }
 
     public int getId() {
         return id;
@@ -52,13 +60,34 @@ public class Pessoa implements InterfaceCadastro {
         this.endereco = endereco;
     }
 
+
     @Override
     public void entrar() {
+        System.out.println("ID: ");
+        int novoId = leia.nextInt();
+        setId(novoId);
 
+        System.out.println("Nome: ");
+        String novoNome = leia.next();
+        setNome(novoNome);
+
+        System.out.println("Email: ");
+        String novoEmail = leia.next();
+        setEmail(novoEmail);
+
+        System.out.println("Telefone: ");
+        telefone.entrar();
+
+        System.out.println("Endereço: ");
+        endereco.entrar();
     }
 
     @Override
     public void imprimir() {
-
+        System.out.println("ID: " + getId());
+        System.out.println("Nome: " + getNome());
+        System.out.println("Email: " + getEmail());
+        System.out.println("Telefone: " + getTelefone());
+        System.out.println("Endereço: " + getEndereco());
     }
 }
