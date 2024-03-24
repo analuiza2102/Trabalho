@@ -63,7 +63,7 @@ public class MenuPrincipal {
     }
 
     public void subMenuFuncionario() {
-        int opcao;
+        int opt;
 
         do {
             System.out.println("\n==== CADASTRO DE FUNCIONÁRIOS ====");
@@ -74,9 +74,9 @@ public class MenuPrincipal {
             System.out.println("0 - Voltar ao menu principal");
             System.out.print("Escolha uma opção: ");
 
-            opcao = leia.nextInt();
+            opt = leia.nextInt();
 
-            switch(opcao) {
+            switch(opt) {
                 case 1:
                     funcionario.entrar();
                     break;
@@ -97,6 +97,6 @@ public class MenuPrincipal {
                     break;
             }
 
-        } while(opcao != 0);
+        } while(opt != 0);
     }
 }
