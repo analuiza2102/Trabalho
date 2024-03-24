@@ -1,7 +1,5 @@
 package Usuarios;
 
-import Infra.Endereco;
-import Infra.Telefone;
 import Interface.InterfaceCadastro;
 import UserControl.PessoaJuridica;
 
@@ -10,14 +8,6 @@ public class Fornecedor extends PessoaJuridica implements InterfaceCadastro {
     private String dataCadastro;
     private String  site;
     private double limiteCompra;
-
-    public Fornecedor(int id, String nome, String email, Telefone telefone, Endereco endereco, String cnpj, String inscricaoEstadual, String contato, String dataCadastro, String site, double limiteCompra) {
-        super(id, nome, email, telefone, endereco, cnpj, inscricaoEstadual, contato);
-        this.dataCadastro = dataCadastro;
-        this.site = site;
-        this.limiteCompra = limiteCompra;
-    }
-
 
     public double getLimiteCompra() {
         return limiteCompra;

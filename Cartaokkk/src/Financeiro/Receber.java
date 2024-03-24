@@ -8,13 +8,6 @@ public class Receber extends Financeiro implements InterfaceCadastro {
     private String nota_fiscal;
     Cliente cliente;
 
-    public Receber(int id, int numero, String emissao, String vencimento, String pagamento, double valor, double juros, double multa, double desconto, double total, String nota_fiscal, Cliente cliente) {
-        super(id, numero, emissao, vencimento, pagamento, valor, juros, multa, desconto, total);
-        this.nota_fiscal = nota_fiscal;
-        this.cliente = cliente;
-    }
-
-
     public String getNota_fiscal() {
         return nota_fiscal;
     }

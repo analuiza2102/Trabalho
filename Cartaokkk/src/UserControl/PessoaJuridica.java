@@ -1,7 +1,5 @@
 package UserControl;
 
-import Infra.Endereco;
-import Infra.Telefone;
 import Interface.InterfaceCadastro;
 
 public class PessoaJuridica extends Pessoa implements InterfaceCadastro {
@@ -9,13 +7,6 @@ public class PessoaJuridica extends Pessoa implements InterfaceCadastro {
     private String cnpj;
     private String inscricaoEstadual;
     private String contato;
-
-    public PessoaJuridica(int id, String nome, String email, Telefone telefone, Endereco endereco, String cnpj, String inscricaoEstadual, String contato) {
-        super(id, nome, email, telefone, endereco);
-        this.cnpj = cnpj;
-        this.inscricaoEstadual = inscricaoEstadual;
-        this.contato = contato;
-    }
 
     public String getCnpj() {
         return cnpj;

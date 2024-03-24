@@ -16,20 +16,6 @@ public class Financeiro implements InterfaceCadastro {
     private double multa;
     private double desconto;
 
-    public Financeiro(int id, int numero, String emissao, String vencimento, String pagamento, double valor, double juros, double multa, double desconto, double total) {
-        this.id = id;
-        this.numero = numero;
-        this.emissao = emissao;
-        this.vencimento = vencimento;
-        this.pagamento = pagamento;
-        this.valor = valor;
-        this.juros = juros;
-        this.multa = multa;
-        this.desconto = desconto;
-        this.total = total;
-    }
-
-
     public int getId() {
         return id;
     }

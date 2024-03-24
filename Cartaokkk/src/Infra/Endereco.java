@@ -2,8 +2,6 @@ package Infra;
 
 import Interface.InterfaceCadastro;
 
-import javax.sound.midi.Soundbank;
-
 public class Endereco implements InterfaceCadastro {
 
     private String logradouro;
@@ -13,16 +11,6 @@ public class Endereco implements InterfaceCadastro {
     private String cidade;
     private String estado;
     private int cep;
-
-    public Endereco(String logradouro, String numero, String complemento, String bairro, String cidade, String estado, int cep) {
-        this.logradouro = logradouro;
-        this.numero = numero;
-        this.complemento = complemento;
-        this.bairro = bairro;
-        this.cidade = cidade;
-        this.estado = estado;
-        this.cep = cep;
-    }
 
     public String getLogradouro() {
         return logradouro;

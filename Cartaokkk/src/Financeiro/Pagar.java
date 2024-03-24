@@ -7,12 +7,6 @@ public class Pagar extends Financeiro implements InterfaceCadastro {
 
     private String boleto;
     Fornecedor fornecedor;
-    public Pagar(int id, int numero, String emissao, String vencimento, String pagamento, double valor, double juros, double multa, double desconto, double total, String boleto, Fornecedor fornecedor) {
-        super(id, numero, emissao, vencimento, pagamento, valor, juros, multa, desconto, total);
-        this.boleto = boleto;
-        this.fornecedor = fornecedor;
-    }
-
 
     public String getBoleto() {
         return boleto;

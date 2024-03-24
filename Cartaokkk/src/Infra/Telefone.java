@@ -7,11 +7,6 @@ public class Telefone implements InterfaceCadastro {
     private int ddd;
     private long numero;
 
-    public Telefone(int ddd, long numero) {
-        this.ddd = ddd;
-        this.numero = numero;
-    }
-
     public int getDdd() {
         return ddd;
     }

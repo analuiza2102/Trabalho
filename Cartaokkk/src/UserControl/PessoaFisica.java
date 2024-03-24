@@ -1,7 +1,5 @@
 package UserControl;
 
-import Infra.Endereco;
-import Infra.Telefone;
 import Interface.InterfaceCadastro;
 
 
@@ -10,13 +8,6 @@ public class PessoaFisica extends Pessoa implements InterfaceCadastro {
     private String cpf;
     private String rg;
     private String emissor;
-
-    public PessoaFisica(int id, String nome, String email, Telefone telefone, Endereco endereco, String cpf, String rg, String emissor) {
-        super(id, nome, email, telefone, endereco);
-        this.cpf = cpf;
-        this.rg = rg;
-        this.emissor = emissor;
-    }
 
     public String getCpf() {
         return cpf;

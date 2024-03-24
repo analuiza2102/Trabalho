@@ -1,11 +1,7 @@
 package Usuarios;
 
-import Infra.Endereco;
-import Infra.Telefone;
 import Interface.InterfaceCadastro;
 import UserControl.PessoaFisica;
-
-import javax.sound.midi.Soundbank;
 
 public class Funcionario extends PessoaFisica implements InterfaceCadastro  {
 
@@ -13,15 +9,6 @@ public class Funcionario extends PessoaFisica implements InterfaceCadastro  {
     private String dataDemissao;
     private String ctps;
     private double salario;
-
-    public Funcionario(int id, String nome, String email, Telefone telefone, Endereco endereco, String cpf, String rg, String emissor, String dataAdmissao, String dataDemissao, String ctps, double salario) {
-        super(id, nome, email, telefone, endereco, cpf, rg, emissor);
-        this.dataAdmissao = dataAdmissao;
-        this.dataDemissao = dataDemissao;
-        this.ctps = ctps;
-        this.salario = salario;
-    }
-
 
     public String getDataAdmissao() {
         return dataAdmissao;
