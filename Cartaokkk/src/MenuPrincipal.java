@@ -81,13 +81,13 @@ public class MenuPrincipal {
                     funcionario.entrar();
                     break;
                 case 2:
-                    // Implementar alterarFuncionario();
+                    alterarFuncionario();
                     break;
                 case 3:
-                    // Implementar consultarFuncionario();
+                    funcionario.imprimir();
                     break;
                 case 4:
-                    // Implementar excluirFuncionario();
+                    deletarFuncionario();
                     break;
                 case 0:
                     System.out.println("Retornando ao menu principal...");
@@ -98,5 +98,29 @@ public class MenuPrincipal {
             }
 
         } while(opt != 0);
+    }
+
+    private void alterarFuncionario() {
+        System.out.println("Digite o ID do funcionário que deseja alterar: ");
+        int idBusca = leia.nextInt();
+
+        if(funcionario.getId() == idBusca) {
+            funcionario.entrar();
+            System.out.println("Funcionário alterado com sucesso!");
+        } else {
+            System.out.println("Funcionário não encontrado!");
+        }
+    }
+
+    private void deletarFuncionario() {
+        System.out.println("Digite o ID do funcionário que deseja excluir: ");
+        int idBusca = leia.nextInt();
+
+        if(funcionario.getId() == idBusca) {
+            funcionario = null;
+            System.out.println("Funcionário excluído com sucesso!");
+        } else {
+            System.out.println("Funcionário não encontrado!");
+        }
     }
 }

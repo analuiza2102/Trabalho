@@ -66,6 +66,7 @@ public class Funcionario extends PessoaFisica implements InterfaceCadastro  {
 
     @Override
     public void imprimir() {
+        super.imprimir();
         System.out.println("Data de Admissão: " + getDataAdmissao());
         System.out.println("Data de Demissão: " + getDataDemissao());
         System.out.println("CTPS: " + getCtps());
